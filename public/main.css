@@ -1,6 +1,3 @@
-/*
-    DEMO STYLE
-*/
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -165,4 +162,21 @@ h3{
     border: none;
     border-bottom: 3px solid grey;
     outline:none;
+}
+.offers
+{
+    display: inline-table;
+    padding-top: 8vh;
+}
+.offers img{
+    width: 50%;
+}
+.bookingicons
+{
+    display: inline;
+    padding:3.5vw;
+}
+.bookingicons img{
+    width: 13vw;
+    height: 7vh;
 }
