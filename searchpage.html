@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Trip Tap Toe</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="public/main.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script> -->
+    
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <img src="images/users.png" alt="Userimage">
+                <h4 style="color: white;line-height: 8vh;">Guest</h4>
+            </div>
+            <div class="components list-group">
+              <a class="list-group-item" href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
+              <a class="list-group-item" href="#"><i class="fa fa-plane fa-fw" aria-hidden="true"></i>&nbsp; Flights</a>
+              <a class="list-group-item" href="#"><i class="fa fa-bed fa-fw" aria-hidden="true"></i>&nbsp; Hotels</a>
+              <a class="list-group-item" href="#"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp; Concierge</a>
+              <a class="list-group-item" href="#"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; Login</a>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                     <i class="fas fa-align-left"></i>
+                </button>
+                <h3 style="display: inline;">Flights</h3>
+            </div>
+            <div>
+              <img src="images/search.jpg" alt="Search Image" style="width: 100%;height: 28vh;margin-top: 2vh;">
+              <div style="line-height: 3vh;padding-top: 2vh;">
+                <div class="form-group row">
+                    <div class="col-5" style="width: 22vh;">
+                        <span style="color: grey;font-size: 0.8em;">FROM</span>
+                        <select class="form-control selectpicker" data-live-search="true" id="exampleSelect1" style="color: black;font-size: 1.3em;height: 10vh;">
+                                <option>DEL </option>
+                                <option>MAA-Chennai</option>
+                                <option>BOM-Mumbai</option>
+                                <option>CCU- Kolkata </option>
+                                <option>GOI- Goa </option>
+                                <option>HYD- Hyderabad </option>
+                                <option>TEL- Telangana </option>
+                                <option>PNQ - Pune </option>
+                                <option>DDN -Dehradun </option>
+                        </select>
+                    </div>
+                    <div class="col-5">
+                        <span style="color: grey;font-size: 0.8em;width: 22vh;">TO</span>
+                        <div class="form-group" style="width: 22vh;">
+                            <select class="form-control selectpicker" data-live-search="true" id="exampleSelect1" style="color: black;font-size: 1.3em;height: 10vh;">
+                                    <option>BOM</option>
+                                    <option >MAA-Chennai</option>
+                                    <option>DEL-Delhi</option>
+                                    <option>CCU- Kolkata </option>
+                                    <option>GOI- Goa </option>
+                                    <option>HYD- Hyderabad </option>
+                                    <option>TEL- Telangana </option>
+                                    <option>PNQ - Pune </option>
+                                    <option>DDN -Dehradun </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-5">
+                        <span style="color: grey;font-size: 0.8em;">DEPART</span>
+                        <div class="form-group" style="width: 20vh;">
+                            <input class="form-control" type="date" value="2011-08-19" id="example-date-input" style="color: black;font-size: 0.8em;height: 10vh;text-align: center;">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <span style="color: grey;font-size: 0.8em;">RETURN</span>
+                        <div class="form-group" style="width: 22vh;">
+                            <input class="form-control" type="date" value="2011-08-19" id="example-date-input" style="color: black;font-size: 0.8em;height: 10vh;text-align: center;">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-5" style="width: 22vh;">
+                        <span style="color: grey;font-size: 0.8em;">TRAVELLERS</span>
+                                <select class="form-control" id="exampleSelect1" style="color: black;font-size: 1.3em;height: 10vh;">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                    </div>
+                    <div class="col-5">
+                        <span style="color: grey;font-size: 0.8em;">CLASS</span>
+                        <div class="form-group" style="width: 24vh;">
+                            <select class="form-control selectpicker" data-live-search="true" id="exampleSelect1" style="color: black;font-size: 1.3em;height: 10vh;">
+                                    <option>Economy </option>
+                                    <option>Premium Economy </option>
+                                    <option>Business </option>
+                                    <option>First </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container"><button class="btn btn-success" style="float: right;margin-right:2vh;">Search</button></div>
+            </div>
+            </div>
+            
+        </div>
+    <div class="overlay"></div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script type="text/javascript" src="customscroll.js"></script>
+    <script type="text/javascript" src="jquery.bcSwipe.min.js"></script>
+    <script type="text/javascript" src="public/main.js"></script>
+</body>
+
+</html>
